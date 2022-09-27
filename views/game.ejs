@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/game.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Masukan Room Code</h1>
+    <input id="txtRoomCode" type="text" name="roomCode" />
+    <button id="submitRoomCode">Join Room</button>
+    <hr />
+    <div id="p1">
+      <h1>Player 1</h1>
+      <label>Choose</label>
+      <button class="rock" value="rock" >
+        <img class="img-rock" src="/public/assets/batu.png">
+      </button>
+      <button class="paper" value="paper">
+        <img class="img-paper" src="/public/assets/kertas.png">
+      </button>
+      <button class="scissors" value="scissor">
+        <img class="img-scissor" src="/public/assets/gunting.png">
+      </button>
+      <hr />
+    </div>
+    <div id="p2">
+      <h1>Player 2</h1>
+      <label>Choose</label>
+      <button class="rock" value="rock" >
+        <img class="img-rock" src="assets/batu.png">
+      </button>
+      <button class="paper" value="paper">
+        <img class="img-paper" src="assets/kertas.png">
+      </button>
+      <button class="scissors" value="scissor">
+        <img class="img-scissor" src="assets/gunting.png">
+      </button>
+    </div>
+    <h1 id="winner">Winner ? =</h1>
+  </body>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="script.js" type="text/javascript" /></script>
+</html>

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(/assets/main-bg.jpg);
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+.input-pass {
+  margin-left: 100px;
+}
+
+.input-dob {
+  margin-left: 45px;
+}
+
+.input-pob {
+  margin-left: 47px;
+}
+
+.input-city {
+  margin-left: 50px;
+}
+
+.input-gender {
+  margin-left: 25px;
+}

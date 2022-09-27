@@ -22,15 +22,13 @@ module.exports = {
     });
   },
 
-  loginAdmin: passport.authenticate("local", {
-    successRedirect: "/whoami",
-    failureRedirect: "/loginAdmin",
+  loginUser: passport.authenticate("local", {
+    successRedirect: "/dashboard",
+    failureRedirect: "/login",
     failureFlash: true,
   }),
-  whoami: (req, res) => {
-    res.render("whoami", req.user.dataValues);
-  },
-  dashboard: (req, res) => {
-    res.render("dashboard");
+
+  game: (req, res) => {
+    res.render("game");
   },
 };

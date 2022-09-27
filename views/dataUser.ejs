@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/dataUser.css" />
+  </head>
+  <body class="bg-cover min-h-screen bg-no-repeat">
+    <section class="my-8">
+      <a
+        href="/create"
+        class="ml-5 p-2 pl-2 w-30 mt-1 text-xs text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-orange-600 dark:border-gray-600 dark:placeholder-blue-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 hover:bg-gray-400"
+        >Add New User</a
+      >
+      <h1 class="text-center text-lg">User Game</h1>
+      <div class="w-full h-full">
+        <br />
+        <div class="grid place-items-center">
+          <form action="" class="content-center">
+            <input
+              type="text"
+              name="search_user"
+              class="p-2 pl-5 w-45 mt-1 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Enter name here"
+            />
+            <button
+              type="submit"
+              class="py-2 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+        <table
+          class="w-auto content-center text-sm text-left text-gray-500 dark:text-gray-400 mx-auto"
+        >
+          <thead
+            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
+            <tr>
+              <th scope="col" class="py-3 px-6">Id</th>
+              <th scope="col" class="py-3 px-6">User Name</th>
+              <!-- <th>Password</th> -->
+              <th scope="col" class="py-3 px-6 text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% usergames.forEach(function (usergame) { %>
+            <tr
+              class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+            >
+              <td
+                scope="row"
+                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+              >
+                <%= usergame.id %>
+              </td>
+              <td class="py-4 px-6"><%= usergame.username %></td>
+              <!-- <td><%= usergame.password %></td> -->
+              <td class="py-4 px-6">
+                <a
+                  href="/detail/<%= usergame.id %>"
+                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  onclick="return confirm('Are you sure?')"
+                  >Detail</a
+                >
+                |
+                <a
+                  href="/edit/<%= usergame.id %>"
+                  class="text-blue-400"
+                  onclick="return confirm('Are you sure?')"
+                  >Edit</a
+                >
+                |
+                <a
+                  href="/add/<%= usergame.id %>"
+                  class="text-blue-200"
+                  onclick="return confirm('Are you sure?')"
+                  >Add Biodata</a
+                >
+                |
+                <a
+                  href="/delete/<%= usergame.id %>"
+                  class="text-red-400"
+                  onclick="return confirm('Are you sure?')"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+        <a
+          href="/dashboard"
+          class="mx-auto btn-mainmenu block text-center mt-3 py-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          >Main Menu</a
+        >
+      </div>
+    </section>
+  </body>
+</html>
