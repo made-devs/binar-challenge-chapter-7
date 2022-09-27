@@ -39,13 +39,13 @@ router.get("/dataUser", restrict, (req, res) => {
 // Game
 router.get("/game", restrict, auth.game);
 
-// End point untuk join dan membuat room baru
+// End point for join and create new room
 router.post("/game/join", restrict, require("../controllers/game/join"));
 
-// End point untuk melakukan submit pilihan ketika di dalam room
+// End point for submit the choices
 router.post("/game/submit", restrict, require("../controllers/game/submit"));
 
-// End point pengecekan hasil akhir pemenang
+// End point for check the results
 router.get(
   "/game/status/:roomCode",
   restrict,
